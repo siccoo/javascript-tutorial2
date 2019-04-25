@@ -43,3 +43,6 @@ console.log(game1);
 
 const game2 = new Hangman('Love', 10);
 console.log(game2);
+
+// Prototypal Inheritance
+// prototype: This is a special object which is assigned as property of any function you make in JavaScript. 
