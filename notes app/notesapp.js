@@ -1,3 +1,4 @@
+// use strict
 console.log('This is from a different file');
 let notes = 
 [ {
@@ -78,3 +79,5 @@ document.querySelector('#search-text').addEventListener('change', function (e){
 // const newParagraph = document.createElement('p');
 // newParagraph.textContent = 'This is a new element from JavaScript';
 // document.querySelector('body').appendChild(newParagraph);
+
+let add = (x) => (y) => (z) => x + y + z; add(1)(2)(4); // 7 (arrow function currying?)

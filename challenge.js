@@ -1,3 +1,5 @@
+'use strict';
+
 // Create an Expense tracker
 
 // const account = {
@@ -19,7 +21,7 @@
 //     },
 //     getAccountSummary: function(){
 //         let totalExpenses = 0 
-        
+
 //         this.expenses.forEach(function (expense, incomes){
 //             totalExpenses = totalExpenses + expense.amount - incomes.amount
 //         })
@@ -27,11 +29,18 @@
 //     }
 // }
 
-//localStorage.setItem('location', 'Philadelphia');
+// localStorage.setItem('location', 'Philadelphia');
 
-console.log(localStorage.getItem('location'))
+// console.log(localStorage.getItem('location'))
 
 // account.addExpense('Rent', 1000);
 // account.addExpense('Rent', 250);
 // account.addIncome('Job', 2500)
 // console.log(account.getAccountSummary())
+// if (myVar === 0) {
+
+// } else if (myVar === 1) {
+
+// } else if (myVar === 2) {
+
+// }

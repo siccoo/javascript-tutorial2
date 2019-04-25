@@ -1,3 +1,5 @@
+'use strict';
+
 // Using String Data types
 let name = 'Ichie';
 console.log(name)
@@ -354,8 +356,7 @@ console.log(Math.ceil(nu))
 console.log(Math.round(nu))
 
 
-// Guessing game: Create a function that is going to take a persons guess and check if their
-// guess was correct. if its correct it should return true, if not it should return false
+// Guessing game: Create a function that is going to take a persons guess and check if their guess was correct. if its correct it should return true, if not it should return false
 let makeGuess = function (guess) {
     let min = 1
     let max = 5
@@ -521,6 +522,162 @@ console.log(playground)
 // localStorage.clear();
 
 
+// Expanding my JavaScript Knowledge
+
+// ARROW FUNCTIONS PART 1 
+const sq = (num) => {
+    return num * num
+}
+
+console.log(sq(8))
+
+const sqLong = (num) => num * num
+
+console.log(sqLong(3))
+
+const pple = [{
+    name: 'Ben',
+    age: 18,
+    gender: 'Male'
+}, {
+    name: 'Angela',
+    age: 19
+}, {
+    name: 'Fabs',
+    age: 21
+}, {
+    name: 'Jessy',
+    age: 22
+}]
+
+// const under20 = pple.filter(function(person){
+//     return person.age < 20
+// })
+
+// This is arrow function unlike the first function
+// const under20 = pple.filter((person) => {
+//     return person.age < 20
+// })
+
+// This is a newer method to arrow function application
+const under20 = pple.filter((person) => person.age < 20)
+
+console.log(under20)
 
 
+// Challenge time
+// 1. Find the person with age 22
+// 2. Print that person's name
 
+const ageLimit = pple.find((person) => person.age === 22)
+console.log(ageLimit.name)
+
+// ARROW FUNCTIONS PART 2 (II)
+// Arrow functions does not bind arguments and it comes with an advanced short hand syntax while our regular functions bind arguments
+// This is our regular function that means ES 5
+
+// const add = function () {
+
+// }
+
+// Read existing notes from localStorage
+
+const getSavedNotes = () => {
+    const notesJSON = localStorage.getItem('notes')
+    
+    if (notesJSON !== null) {
+        return JSON.parse(notesJSON)
+    } else {
+        return []
+    }
+}
+
+// Save the notes to localStorage
+const saveNotes = (notes) => {
+    localStorage.setItem('notes', JSON.stringify(notes))
+}
+
+// Remove a note from the list
+const removeNote = (id) => {
+    const noteIndex = notes.findIndex((note) => note.id === id)
+
+    if (noteIndex > -1) {
+        notes.splice(noteIndex, 1)
+    }
+}
+
+// CONDITIONAL (TERNARY) OPERATOR
+
+const myAge = 7
+let message = myAge >= 18 ? 'You can vote!' : 'You cannot vote.'
+ 
+// if (myAge >= 18) {
+//     message = 'You can vote!'
+// } else {
+//     message = 'You cannot vote.'
+// }
+console.log(message)
+
+// METHOD ONE
+const drinkAge = 30
+const showPage = () => {
+    console.log('Showing the page')
+}
+const showErrorPage = () => {
+    console.log('Showing the error page')
+}
+
+drinkAge >= 21 ? showPage() : showErrorPage()
+
+// METHOD TWO
+const drinkingAge = 30
+const showingPage = () => {
+    return 'Showing the page'
+}
+const showingErrorPage = () => {
+    return 'Showing the error page'
+}
+
+const msg = drinkingAge >= 21 ? showPage() : showErrorPage()
+console.log(msg)
+
+// Catch and Throw Errors in JavaScript
+// This is the interesting part of JS, because if we not getting errors then we are not progressing, so that's why we using try and catch errors, in other words we would like to show how to throw errors in JS.
+const getTips = (amount) => {
+    if (typeof amount === 'number'){
+        return amount *.25
+    } else {
+        throw Error('Argument must be a number');
+    }
+    
+}
+
+try {
+    const result = getTips(10);
+    console.log(result);
+} catch (e) {
+    console.log('try catch block is running');
+}
+
+let data;
+const processData = () => {
+    data = '246813579';
+}
+processData();
+console.log(data)
+
+// Object Oriented Programming - oriented programming means programming based on some concepts
+
+const person = {
+    firstName: 'Moya',
+    lastName: 'Richards',
+    age: 31,
+    location: 'Rivers',
+    getBio() {
+        return `${this.firstName} is ${this.age} and she lives in ${this.location}`
+    }
+}
+
+const biodata = person.getBio();
+
+console.log(biodata)
