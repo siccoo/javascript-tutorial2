@@ -14,11 +14,21 @@ class Square {
 // ## Class expressions
 // A class expression is another way to define a class. Class expressions can be named or unnamed. The name given to a named class expression is local to the class's body. (it can be retrieved through the class's (not an instance's) name property, though).
 
+// Unnamed
 let Rectangle = class {
     constructor(length, breadth) {
         this.length = length;
         this.breadth = breadth;
     }
+};
+console.log(Rectangle.name);
+
+let Triangle = class Triangle2 {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
 }
 
-console
+console.log(Triangle.name);
+
