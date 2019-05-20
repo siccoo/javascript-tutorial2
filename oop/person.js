@@ -20,9 +20,9 @@ const Persons = function(firstName, lastName, location, age) {
     this.location = location;
     this.age = age;
 }
-const me = new Persons('Chilaka', 'Jessica', 'Umuebulu', 19);
-me.lastName = 'Ezichi'
-console.log(me);
+const person1 = new Persons('Chilaka', 'Jessica', 'Umuebulu', 19);
+person1.lastName = 'Ezichi'
+console.log(person1);
 
 const persons2 = new Persons('Favour', 'Richards', 'Mgbousimini', 26);
 console.log(persons2);
@@ -46,4 +46,19 @@ console.log(game2);
 
 // Prototypal Inheritance
 // prototype: This is a special object which is assigned as property of any function you make in JavaScript.
+
+const Vehicle = function(make, model, colour) {
+    this.make = make;
+    this.model = model;
+    this.colour = colour;
+}
+
+Vehicle.prototype.getCar = function() {
+    return `${this.make} is ${this.colour}`
+}
+
+const car = new Vehicle("Mercedez", 2003, "Red");
+console.log(car)
+
+
  
