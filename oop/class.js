@@ -110,3 +110,44 @@ now lets create our object properly, doing manually, like we did above, is causi
  let a2 = new Person();
  console.log(a2);
 
+
+// FAT ARROW FUNCTION AND FUNCTION EXPRESSION 
+ function catsWith9Lives() {
+
+  this.lives = 1;
+
+ //fat arrow function
+  this.brownCat = {
+    lives: 9,
+    jumps: () => {
+      return this.lives--;
+    }
+  }
+
+  //function expression
+  this.grayCat = {
+    lives: 9,
+    jumps: function () {
+      return this.lives--;
+    }
+  };
+
+}
+
+let cat = new catsWith9Lives();
+
+console.log('First Jump');
+console.log(cat.brownCat.jumps());
+console.log(cat.grayCat.jumps());
+
+console.log('Second Jump');
+console.log(cat.brownCat.jumps());
+console.log(cat.grayCat.jumps());
+
+
+/** Which cat died? whoever got to zero first died
+
+Hint: arrow function does not bind this. It uses whatever "this" is in its parent scope.
+
+*/
+

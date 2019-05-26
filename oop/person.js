@@ -44,6 +44,26 @@ console.log(game1);
 const game2 = new Hangman('Love', 10);
 console.log(game2);
 
+//1. Set up the word instance property as an array of lower case letters.
+//2. Set up another instance property to store guessed letters.
+//3. Create a method that gives you the word puzzle back.
+
+const Spyman = function(letter, guess) {
+    this.letter = letter.toLowerCase();
+    this.guess = guess;
+    this.guessedLetters = ['c'];
+}
+
+Spyman.prototype.getPuzzle = function() {
+    let puzzle = '';
+}
+
+const game1 = new Hangman('Seeking', 6);
+console.log(game1);
+
+const game2 = new Hangman('Love', 10);
+console.log(game2);
+
 // Prototypal Inheritance
 // prototype: This is a special object which is assigned as property of any function you make in JavaScript.
 
