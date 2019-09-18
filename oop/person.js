@@ -58,11 +58,14 @@ Spyman.prototype.getPuzzle = function() {
     let puzzle = '';
 }
 
-const game1 = new Hangman('Seeking', 6);
-console.log(game1);
+const game3 = new Spyman('GuessedLetters', 'a, b, c, d, e, f');
+console.log(game3);
 
-const game2 = new Hangman('Love', 10);
-console.log(game2);
+// const game1 = new Hangman('Seeking', 6);
+// console.log(game1);
+
+// const game2 = new Hangman('Love', 10);
+// console.log(game2);
 
 // Prototypal Inheritance
 // prototype: This is a special object which is assigned as property of any function you make in JavaScript.
