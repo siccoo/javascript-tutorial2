@@ -84,4 +84,11 @@ const car = new Vehicle("Mercedez", 2003, "Red");
 console.log(car)
 
 
- 
+// Functions that uses the NEW operator are called constructor functions.
+
+const Individual = function(firstName) {
+    this.firstName = firstName;
+}
+
+const me = new Individual('Chisom');
+console.log(me);
