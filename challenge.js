@@ -44,3 +44,11 @@
 // } else if (myVar === 2) {
 
 // }
+
+var sum;
+
+for (var i=0;i<10;i++){ 
+  sum = sum + 1;
+}
+
+console.log(sum);
